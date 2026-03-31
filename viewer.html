@@ -7,20 +7,34 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f7;color:#1a1d2e;min-height:100vh}
-.wrap{max-width:680px;margin:0 auto;padding:24px 16px 48px}
-.header{background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:14px;padding:32px 36px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
-.logo-row{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+.header{background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:14px;padding:28px 32px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .logo-box{width:36px;height:36px;background:linear-gradient(135deg,#e8620a,#f59e0b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:white;letter-spacing:-.5px}
 .agencia-name{color:white;font-size:15px;font-weight:700}
-.report-title{color:white;font-size:24px;font-weight:800;margin-bottom:6px}
+.report-title{color:white;font-size:22px;font-weight:800;margin-bottom:6px}
 .report-sub{color:rgba(255,255,255,.6);font-size:13px}
-.periodo-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,98,10,.15);border:1px solid rgba(232,98,10,.3);border-radius:20px;padding:6px 16px;margin-top:12px}
+.periodo-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,98,10,.15);border:1px solid rgba(232,98,10,.3);border-radius:20px;padding:5px 14px;margin-top:10px}
 .periodo-badge span{color:#f97316;font-size:13px;font-weight:700}
 .header-right{text-align:right}
 .cliente-lbl{color:rgba(255,255,255,.4);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
 .cliente-nome{color:white;font-size:18px;font-weight:700}
-.roas-lbl{color:rgba(255,255,255,.4);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:16px}
-.roas-val{color:#4ade80;font-size:32px;font-weight:800}
+.roas-lbl{color:rgba(255,255,255,.4);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:14px}
+.roas-val{color:#4ade80;font-size:30px;font-weight:800}
+/* Tabs */
+.tabs-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab-btn{border:none;border-radius:8px;padding:8px 16px;cursor:pointer;font-size:13px;font-weight:600;background:#e5e7eb;color:#374151;transition:all .15s}
+.tab-btn.active{background:#1a1d2e;color:white}
+.tab-btn:hover:not(.active){background:#d1d5db}
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+/* Hero grid */
+.hero-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+.hero-card{border-radius:12px;padding:18px 20px}
+.hero-card-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;opacity:.7}
+.hero-card-val{font-size:22px;font-weight:900}
+.hero-card-sub{font-size:11px;margin-top:4px;opacity:.5}
+/* Funnel */
 .funnel-section{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:24px 28px;margin-bottom:20px}
 .funnel-title{color:white;font-size:14px;font-weight:700;margin-bottom:20px}
 .funnel-step{display:flex;align-items:center;gap:12px}
@@ -31,16 +45,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .funnel-pct{width:50px;text-align:right}
 .funnel-pct-val{font-size:12px;font-weight:600;color:rgba(255,255,255,.5)}
 .funnel-arrow{color:rgba(255,255,255,.3);padding:3px 0 3px 30px;font-size:14px}
+/* KPIs */
 .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:20px}
 .calc-card{background:white;border-radius:10px;padding:16px 18px;border-left:4px solid #e8620a;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .calc-card-label{font-size:11px;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
 .calc-card-value{font-size:18px;font-weight:800;color:#1a1d2e}
+/* Card */
 .card{background:white;border-radius:12px;padding:24px 28px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .card-title{font-size:14px;font-weight:700;color:#1a1d2e;margin-bottom:16px}
+/* Two col */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+/* Table */
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{background:#f8f9fc;padding:10px 12px;text-align:left;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.5px}
 td{padding:10px 12px;border-bottom:1px solid #f0f2f7}
+/* Insights */
 .insights{background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid #bbf7d0;border-radius:12px;padding:24px 28px;margin-bottom:20px}
 .insights-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
 .insights-badge{background:linear-gradient(135deg,#16a34a,#15803d);color:white;font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
@@ -48,20 +67,23 @@ td{padding:10px 12px;border-bottom:1px solid #f0f2f7}
 .insight-item{display:flex;gap:12px;margin-bottom:12px}
 .insight-dot{width:6px;height:6px;background:#16a34a;border-radius:50%;margin-top:6px;flex-shrink:0}
 .insight-text{font-size:13px;color:#1c4532;line-height:1.6}
+/* Error */
 .error-state{text-align:center;padding:80px 20px;color:#6b7280}
 .error-icon{font-size:56px;margin-bottom:16px}
 .error-title{font-size:22px;font-weight:700;margin-bottom:8px;color:#374151}
+/* Footer */
 .footer{text-align:center;padding:24px;color:#9aa0b0;font-size:12px;border-top:1px solid #e5e7eb;margin-top:12px}
 @media(max-width:500px){
   .header{flex-direction:column}
   .header-right{text-align:left}
   .two-col{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr 1fr}
 }
 @media print{
   body{background:white}
-  .footer{display:none}
-  .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .funnel-section{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .tabs-nav,.footer{display:none}
+  .tab-pane{display:block!important}
+  .header,.funnel-section{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 </style>
 </head>
@@ -74,34 +96,45 @@ td{padding:10px 12px;border-bottom:1px solid #f0f2f7}
 // ── Formatters ────────────────────────────────────────────────────────────────
 function brl(v){return(parseFloat(v)||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
 function num(v){return(parseInt(v)||0).toLocaleString('pt-BR');}
-function roasF(v){return`${(parseFloat(v)||0).toFixed(2)}x`;}
-function pctF(v){return`${(parseFloat(v)||0).toFixed(1)}%`;}
+function roasF(v){return(parseFloat(v)||0).toFixed(2)+'x';}
+function pctF(v){return(parseFloat(v)||0).toFixed(1)+'%';}
 function mesLabel(m){
   if(!m)return'';
-  const[y,mo]=m.split('-');
+  const p=m.split('-');
   const meses=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-  return`${meses[parseInt(mo)-1]||''} ${y}`;
+  return(meses[parseInt(p[1])-1]||'')+' '+p[0];
+}
+function mesLabelCurto(m){
+  if(!m)return'';
+  const p=m.split('-');
+  const meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  return(meses[parseInt(p[1])-1]||'')+'/'+p[0].slice(2);
 }
 
 // ── Cálculos ──────────────────────────────────────────────────────────────────
 function calcular(tipo,d){
-  const inv=parseFloat(d.investimento)||0;
-  const leads=parseInt(d.leads)||0;
-  const c={};
+  const inv=parseFloat(d.investimento)||0,leads=parseInt(d.leads)||0,c={};
   if(tipo==='clinica'){
     const ag=parseInt(d.agendados)||0,comp=parseInt(d.compareceram)||0,fech=parseInt(d.fechamentos)||0,ref=parseFloat(d.receita_efetivada)||0;
     c.cpl=leads>0?inv/leads:0;c.custo_agendamento=ag>0?inv/ag:0;c.custo_comparecimento=comp>0?inv/comp:0;c.custo_fechamento=fech>0?inv/fech:0;c.roas=inv>0?ref/inv:0;c.tx_ag=leads>0?ag/leads*100:0;c.tx_comp=ag>0?comp/ag*100:0;c.tx_fech=comp>0?fech/comp*100:0;
   }else if(tipo==='corretor'){
-    const ag=parseInt(d.agendados)||0,vis=parseInt(d.visitas)||0,cont=parseInt(d.contratos)||0,val=parseFloat(d.valor_vendido)||0,pctC=parseFloat(d.comissao_pct)||6,comissao=val*(pctC/100);
-    c.cpl=leads>0?inv/leads:0;c.custo_visita=vis>0?inv/vis:0;c.custo_contrato=cont>0?inv/cont:0;c.roas=inv>0?comissao/inv:0;c.comissao=comissao;c.tx_ag=leads>0?ag/leads*100:0;c.tx_vis=ag>0?vis/ag*100:0;c.tx_cont=vis>0?cont/vis*100:0;
+    const ag=parseInt(d.agendados)||0,vis=parseInt(d.visitas)||0,cont=parseInt(d.contratos)||0,val=parseFloat(d.valor_vendido)||0,pct2=parseFloat(d.comissao_pct)||6,comissao=val*(pct2/100);
+    c.cpl=leads>0?inv/leads:0;c.custo_visita=vis>0?inv/vis:0;c.custo_contrato=cont>0?inv/cont:0;c.roas=inv>0?comissao/inv:0;c.comissao=comissao;
   }else if(tipo==='pousada'){
     const cont=parseInt(d.contatos)||0,res=parseInt(d.reservas)||0,chk=parseInt(d.checkins)||0,rec=parseFloat(d.receita)||0;
-    c.cpl=leads>0?inv/leads:0;c.custo_contato=cont>0?inv/cont:0;c.custo_reserva=res>0?inv/res:0;c.custo_checkin=chk>0?inv/chk:0;c.roas=inv>0?rec/inv:0;c.tx_cont=leads>0?cont/leads*100:0;c.tx_res=cont>0?res/cont*100:0;c.tx_chk=res>0?chk/res*100:0;
+    c.cpl=leads>0?inv/leads:0;c.custo_contato=cont>0?inv/cont:0;c.custo_reserva=res>0?inv/res:0;c.custo_checkin=chk>0?inv/chk:0;c.roas=inv>0?rec/inv:0;
   }else if(tipo==='construtora'){
     const reun=parseInt(d.reunioes)||0,orc=parseInt(d.orcamentos)||0,cont=parseInt(d.contratos)||0,val=parseFloat(d.valor_contratado)||0;
-    c.cpl=leads>0?inv/leads:0;c.custo_reuniao=reun>0?inv/reun:0;c.custo_orcamento=orc>0?inv/orc:0;c.custo_contrato=cont>0?inv/cont:0;c.roas=inv>0?val/inv:0;c.tx_reun=leads>0?reun/leads*100:0;c.tx_orc=reun>0?orc/reun*100:0;c.tx_cont=orc>0?cont/orc*100:0;
+    c.cpl=leads>0?inv/leads:0;c.custo_reuniao=reun>0?inv/reun:0;c.custo_orcamento=orc>0?inv/orc:0;c.custo_contrato=cont>0?inv/cont:0;c.roas=inv>0?val/inv:0;
   }
   return c;
+}
+
+function getReceita(tipo,d,c){
+  return tipo==='clinica'?parseFloat(d.receita_efetivada)||0:tipo==='corretor'?c.comissao||0:tipo==='pousada'?parseFloat(d.receita)||0:parseFloat(d.valor_contratado)||0;
+}
+function labelReceita(tipo){
+  return tipo==='clinica'?'Receita Efetivada':tipo==='corretor'?'Comissão Gerada':tipo==='pousada'?'Receita Total':'Valor Contratado';
 }
 
 // ── Funil ─────────────────────────────────────────────────────────────────────
@@ -114,179 +147,319 @@ function buildFunnel(tipo,d){
   };
   const steps=defs[tipo]||[];
   const vals=steps.map(s=>parseInt(d[s.k])||0);
-  const maxVal=Math.max(...vals,1);
-  return steps.map((s,i)=>{
-    const v=vals[i];
-    const w=Math.max(20,Math.round(v/maxVal*100));
+  const maxVal=Math.max.apply(null,vals.concat([1]));
+  return steps.map(function(s,i){
+    const v=vals[i],w=Math.max(20,Math.round(v/maxVal*100));
     const prev=i>0?vals[i-1]:0;
     const pctLabel=i>0&&prev>0?pctF(v/prev*100):'';
-    return`${i>0?`<div class="funnel-arrow">▼</div>`:''}
-      <div class="funnel-step">
-        <div class="funnel-bar-wrap">
-          <div class="funnel-bar" style="background:${s.cor};width:${w}%">
-            <span class="funnel-bar-label">${s.label}</span>
-            <span class="funnel-bar-val">${num(v)}</span>
-          </div>
-        </div>
-        <div class="funnel-pct"><span class="funnel-pct-val">${pctLabel}</span></div>
-      </div>`;
+    return(i>0?'<div class="funnel-arrow">▼</div>':'')+
+      '<div class="funnel-step"><div class="funnel-bar-wrap">'+
+      '<div class="funnel-bar" style="background:'+s.cor+';width:'+w+'%">'+
+      '<span class="funnel-bar-label">'+s.label+'</span>'+
+      '<span class="funnel-bar-val">'+num(v)+'</span></div></div>'+
+      '<div class="funnel-pct"><span class="funnel-pct-val">'+pctLabel+'</span></div></div>';
   }).join('');
 }
 
 // ── KPIs ─────────────────────────────────────────────────────────────────────
 function buildKpis(tipo,d,c){
-  const defs={
+  var defs={
     clinica:[{label:'Investimento',val:brl(d.investimento),cor:'#1877f2'},{label:'Custo por Lead',val:brl(c.cpl),cor:'#e8620a'},{label:'Custo/Agendamento',val:brl(c.custo_agendamento),cor:'#9c27b0'},{label:'Custo/Comparecimento',val:brl(c.custo_comparecimento),cor:'#0891b2'},{label:'Custo/Fechamento',val:brl(c.custo_fechamento),cor:'#ea4335'},{label:'ROAS',val:roasF(c.roas),cor:'#16a34a'}],
     corretor:[{label:'Investimento',val:brl(d.investimento),cor:'#1877f2'},{label:'Custo por Lead',val:brl(c.cpl),cor:'#e8620a'},{label:'Custo por Visita',val:brl(c.custo_visita),cor:'#9c27b0'},{label:'Custo por Contrato',val:brl(c.custo_contrato),cor:'#ea4335'},{label:'Comissão Gerada',val:brl(c.comissao),cor:'#0891b2'},{label:'ROAS',val:roasF(c.roas),cor:'#16a34a'}],
     pousada:[{label:'Investimento',val:brl(d.investimento),cor:'#1877f2'},{label:'Custo por Lead',val:brl(c.cpl),cor:'#e8620a'},{label:'Custo por Reserva',val:brl(c.custo_reserva),cor:'#9c27b0'},{label:'Custo por Check-in',val:brl(c.custo_checkin),cor:'#0891b2'},{label:'Receita Total',val:brl(d.receita),cor:'#ea4335'},{label:'ROAS',val:roasF(c.roas),cor:'#16a34a'}],
     construtora:[{label:'Investimento',val:brl(d.investimento),cor:'#1877f2'},{label:'Custo por Lead',val:brl(c.cpl),cor:'#e8620a'},{label:'Custo por Reunião',val:brl(c.custo_reuniao),cor:'#9c27b0'},{label:'Custo por Orçamento',val:brl(c.custo_orcamento),cor:'#0891b2'},{label:'Custo por Contrato',val:brl(c.custo_contrato),cor:'#ea4335'},{label:'ROAS',val:roasF(c.roas),cor:'#16a34a'}],
   };
-  return(defs[tipo]||[]).map(k=>`<div class="calc-card" style="border-left-color:${k.cor}"><div class="calc-card-label">${k.label}</div><div class="calc-card-value">${k.val}</div></div>`).join('');
+  return(defs[tipo]||[]).map(function(k){
+    return'<div class="calc-card" style="border-left-color:'+k.cor+'"><div class="calc-card-label">'+k.label+'</div><div class="calc-card-value">'+k.val+'</div></div>';
+  }).join('');
 }
 
 // ── Insights ──────────────────────────────────────────────────────────────────
 function buildInsights(tipo,d,c){
-  const items=[];
-  const rv=parseFloat(c.roas)||0;
-  if(rv>=4)items.push(`<strong>Excelente retorno:</strong> ROAS de ${roasF(c.roas)} — cada R$&nbsp;1 investido gerou R$&nbsp;${rv.toFixed(2)} em retorno. Resultado acima da média do setor.`);
-  else if(rv>=2)items.push(`<strong>Retorno positivo:</strong> ROAS de ${roasF(c.roas)}. Há oportunidade de otimização para aumentar o retorno sobre o investimento.`);
-  else if(rv>0)items.push(`<strong>Atenção ao ROAS:</strong> ${roasF(c.roas)} está abaixo do ideal. Recomenda-se revisar segmentações e criativos.`);
+  var items=[],rv=parseFloat(c.roas)||0;
+  if(rv>=4)items.push('<strong>Excelente retorno:</strong> ROAS de '+roasF(c.roas)+' — cada R$&nbsp;1 investido gerou R$&nbsp;'+rv.toFixed(2)+' em retorno.');
+  else if(rv>=2)items.push('<strong>Retorno positivo:</strong> ROAS de '+roasF(c.roas)+'. Há oportunidade de otimização para aumentar o retorno.');
+  else if(rv>0)items.push('<strong>Atenção ao ROAS:</strong> '+roasF(c.roas)+' está abaixo do ideal. Recomenda-se revisar segmentações e criativos.');
   if(tipo==='clinica'){
-    const txComp=parseFloat(c.tx_comp)||0,txFech=parseFloat(c.tx_fech)||0;
-    if(txComp<50)items.push(`<strong>Taxa de comparecimento baixa (${pctF(txComp)}):</strong> confirmação automática via WhatsApp pode reduzir o no-show.`);
-    if(txFech>50)items.push(`<strong>Alta taxa de fechamento (${pctF(txFech)}):</strong> mais da metade dos pacientes que compareceram fecharam tratamento. Equipe bem alinhada.`);
-    items.push(`<strong>Recomendação:</strong> com CPL de ${brl(c.cpl)}, foque em aumentar o volume de leads mantendo a qualidade de segmentação.`);
+    var txComp=parseFloat(c.tx_comp)||0,txFech=parseFloat(c.tx_fech)||0;
+    if(txComp<50)items.push('<strong>Taxa de comparecimento ('+pctF(txComp)+'):</strong> confirmação via WhatsApp pode reduzir no-show.');
+    if(txFech>50)items.push('<strong>Alta taxa de fechamento ('+pctF(txFech)+'):</strong> equipe bem alinhada na conversão de pacientes.');
+    items.push('<strong>Recomendação:</strong> CPL de '+brl(c.cpl)+' — foque em aumentar volume de leads mantendo a qualidade.');
   }else if(tipo==='corretor'){
-    items.push(`<strong>Comissão gerada:</strong> ${brl(c.comissao)} com investimento de ${brl(d.investimento)}. Custo por contrato: ${brl(c.custo_contrato)}.`);
-    items.push(`<strong>Recomendação:</strong> remarketing para leads que agendaram mas não visitaram pode aumentar a taxa de visitas.`);
+    items.push('<strong>Comissão gerada:</strong> '+brl(c.comissao)+' com investimento de '+brl(d.investimento)+'. Custo por contrato: '+brl(c.custo_contrato)+'.');
+    items.push('<strong>Recomendação:</strong> remarketing para leads que agendaram mas não visitaram pode aumentar conversões.');
   }else if(tipo==='pousada'){
-    if(d.diaria_media)items.push(`<strong>Diária média de ${brl(d.diaria_media)}:</strong> com ${num(d.checkins)} check-ins, há potencial para upsell de serviços adicionais.`);
-    items.push(`<strong>Recomendação:</strong> campanhas com antecedência de 30-45 dias tendem a gerar reservas de maior valor no setor hoteleiro.`);
+    items.push('<strong>Recomendação:</strong> campanhas com 30-45 dias de antecedência geram reservas de maior valor no setor hoteleiro.');
   }else if(tipo==='construtora'){
-    items.push(`<strong>Pipeline gerado:</strong> de ${num(d.leads)} leads até ${num(d.contratos)} contrato(s) — ${brl(d.valor_contratado)} em obras.`);
-    items.push(`<strong>Recomendação:</strong> nutrição dos leads em orçamento via e-mail e WhatsApp aumenta a conversão no ciclo longo da construção civil.`);
+    items.push('<strong>Pipeline:</strong> de '+num(d.leads)+' leads até '+num(d.contratos)+' contrato(s) — '+brl(d.valor_contratado)+' em obras.');
+    items.push('<strong>Recomendação:</strong> nutrição dos leads em orçamento via WhatsApp aumenta conversão no ciclo longo.');
   }
-  return items.map(t=>`<div class="insight-item"><div class="insight-dot"></div><div class="insight-text">${t}</div></div>`).join('');
+  return items.map(function(t){return'<div class="insight-item"><div class="insight-dot"></div><div class="insight-text">'+t+'</div></div>';}).join('');
 }
 
-// ── Render ────────────────────────────────────────────────────────────────────
+// ── Gráfico SVG ───────────────────────────────────────────────────────────────
+function buildChart(rels,tipo){
+  if(!rels||rels.length<2)return'';
+  var data=rels.map(function(r){
+    var d=r.dados,c=calcular(tipo,d);
+    return{mes:r.mes,inv:parseFloat(d.investimento)||0,rec:getReceita(tipo,d,c),roas:c.roas||0,leads:parseInt(d.leads)||0};
+  });
+  var maxVal=Math.max.apply(null,data.map(function(d){return Math.max(d.inv,d.rec);}));
+  if(!maxVal)return'';
+  var W=600,H=150,PB=24,PT=14,PL=8,PR=8;
+  var slotW=Math.floor((W-PL-PR)/data.length);
+  var barW=Math.max(4,Math.floor(slotW*0.35));
+  var bars=data.map(function(d,i){
+    var x=PL+i*slotW+Math.floor(slotW/2);
+    var hI=Math.round((d.inv/maxVal)*(H-PT-PB));
+    var hR=Math.round((d.rec/maxVal)*(H-PT-PB));
+    var yI=H-PB-hI,yR=H-PB-hR;
+    var roasColor=d.roas>=3?'#4ade80':d.roas>=1.5?'#fbbf24':'#f87171';
+    return'<rect x="'+(x-barW-1)+'" y="'+yI+'" width="'+barW+'" height="'+hI+'" fill="#e8620a" opacity="0.85" rx="2"/>'+
+      '<rect x="'+(x+1)+'" y="'+yR+'" width="'+barW+'" height="'+hR+'" fill="#16a34a" opacity="0.85" rx="2"/>'+
+      '<text x="'+x+'" y="'+(Math.min(yI,yR)-4)+'" text-anchor="middle" font-size="9" fill="'+roasColor+'" font-weight="700">'+d.roas.toFixed(1)+'x</text>'+
+      '<text x="'+x+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="#9aa0b0">'+mesLabelCurto(d.mes)+'</text>';
+  }).join('');
+  return'<div class="card"><div class="card-title">📈 Evolução Mensal</div>'+
+    '<div style="display:flex;gap:16px;margin-bottom:10px;font-size:11px;color:#6b7280">'+
+    '<span><span style="display:inline-block;width:10px;height:10px;background:#e8620a;border-radius:2px;margin-right:4px;vertical-align:middle"></span>Investimento</span>'+
+    '<span><span style="display:inline-block;width:10px;height:10px;background:#16a34a;border-radius:2px;margin-right:4px;vertical-align:middle"></span>'+labelReceita(tipo)+'</span>'+
+    '<span style="margin-left:auto;color:#9aa0b0">Números em laranja = ROAS</span></div>'+
+    '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto">'+bars+'</svg></div>';
+}
+
+// ── Header ───────────────────────────────────────────────────────────────────
+function buildHeader(agencia,titulo,sub,clienteNome,roasVal,badge){
+  return'<div class="header">'+
+    '<div>'+
+    '<div class="logo-row"><div class="logo-box">DK2</div><div class="agencia-name">'+agencia+'</div></div>'+
+    '<div class="report-title">'+titulo+'</div>'+
+    '<div class="report-sub">'+sub+'</div>'+
+    (badge?'<div class="periodo-badge"><span>'+badge+'</span></div>':'')+
+    '</div>'+
+    '<div class="header-right">'+
+    '<div class="cliente-lbl">Cliente</div>'+
+    '<div class="cliente-nome">'+clienteNome+'</div>'+
+    '<div class="roas-lbl">ROAS</div>'+
+    '<div class="roas-val">'+roasF(roasVal)+'</div>'+
+    '</div></div>';
+}
+
+// ── Render: relatório único (mensal ou período) ───────────────────────────────
+function renderSingle(p){
+  var app=document.getElementById('app');
+  var tipo=p.cliente.tipo,d=p.dados,c=calcular(tipo,d);
+  var agencia=p.agencia||'DK2 Conecta';
+  var isPeriodo=p.tipo==='periodo';
+  var periodoLabel=isPeriodo?(mesLabel(p.inicio)+' a '+mesLabel(p.fim)):mesLabel(p.mes);
+  document.title='Relatório '+p.cliente.nome+' — '+periodoLabel;
+
+  var heroHtml='';
+  if(isPeriodo){
+    var recT=getReceita(tipo,d,c),lbR=labelReceita(tipo);
+    heroHtml='<div class="two-col">'+
+      '<div style="background:linear-gradient(135deg,#7c2d12,#9a3412);border-radius:14px;padding:22px 28px;color:white"><div class="hero-card-lbl">💸 Investimento Total</div><div style="font-size:26px;font-weight:900">'+brl(d.investimento)+'</div></div>'+
+      '<div style="background:linear-gradient(135deg,#14532d,#166534);border-radius:14px;padding:22px 28px;color:white"><div class="hero-card-lbl">💰 '+lbR+'</div><div style="font-size:26px;font-weight:900;color:#4ade80">'+brl(recT)+'</div></div>'+
+      '</div>';
+  }
+  var receitaHtml='';
+  if(tipo==='clinica'&&!isPeriodo){
+    receitaHtml='<div class="two-col">'+
+      '<div style="background:linear-gradient(135deg,#16a34a,#15803d);border-radius:12px;padding:20px 24px;color:white"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;opacity:.7">Tratamentos Efetivados</div><div style="font-size:22px;font-weight:800">'+brl(d.receita_efetivada)+'</div></div>'+
+      '<div style="background:linear-gradient(135deg,#dc2626,#b91c1c);border-radius:12px;padding:20px 24px;color:white"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;opacity:.7">Tratamentos Não Efetivados</div><div style="font-size:22px;font-weight:800">'+brl(d.receita_nao_efetivada)+'</div></div>'+
+      '</div>';
+  }
+  var mesTableHtml='';
+  if(isPeriodo&&p.mesesData&&p.mesesData.length>1){
+    var lbR2=labelReceita(tipo);
+    var rows=p.mesesData.map(function(r){
+      var rd=r.dados,rc=calcular(tipo,rd),rec=getReceita(tipo,rd,rc);
+      return'<tr><td><strong>'+mesLabel(r.mes)+'</strong></td><td>'+num(rd.leads)+'</td><td>'+brl(rd.investimento)+'</td>'+
+        '<td style="color:#16a34a;font-weight:600">'+brl(rec)+'</td>'+
+        '<td style="font-weight:800;color:'+(rc.roas>=3?'#16a34a':'#b45309')+'">'+roasF(rc.roas)+'</td></tr>';
+    }).join('');
+    mesTableHtml='<div class="card"><div class="card-title">📅 Detalhamento Mês a Mês</div>'+
+      '<table><thead><tr><th>Mês</th><th>Leads</th><th>Investimento</th><th>'+lbR2+'</th><th>ROAS</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+
+  app.innerHTML=buildHeader(agencia,isPeriodo?'Relatório de Período':'Relatório de Performance',isPeriodo?(p.meses+' mês(es)'):mesLabel(p.mes),p.cliente.nome,c.roas,isPeriodo?('📅 '+periodoLabel):'')+
+    heroHtml+receitaHtml+
+    '<div class="funnel-section"><div class="funnel-title">📉 Funil de Conversão'+(isPeriodo?' — Acumulado':'')+'</div>'+buildFunnel(tipo,d)+'</div>'+
+    '<div class="calc-grid">'+buildKpis(tipo,d,c)+'</div>'+
+    mesTableHtml+
+    '<div class="insights"><div class="insights-header"><span class="insights-badge">✦ Análise</span><span class="insights-title">Insights do Período</span></div>'+buildInsights(tipo,d,c)+'</div>';
+}
+
+// ── Render: visão completa do cliente (todas as abas) ─────────────────────────
+function renderCliente(p){
+  var app=document.getElementById('app');
+  var tipo=p.cliente.tipo,agencia=p.agencia||'DK2 Conecta';
+  var rels=p.relatorios.slice().sort(function(a,b){return a.mes.localeCompare(b.mes);});
+  var n=rels.length;
+
+  // Somar tudo
+  var d_total={};
+  rels.forEach(function(r){
+    Object.keys(r.dados).forEach(function(k){
+      var v=parseFloat(r.dados[k]);
+      if(!isNaN(v))d_total[k]=(d_total[k]||0)+v;
+    });
+  });
+  var c_total=calcular(tipo,d_total);
+  var recTotal=getReceita(tipo,d_total,c_total);
+
+  // Médias
+  var d_avg={};
+  Object.keys(d_total).forEach(function(k){d_avg[k]=d_total[k]/n;});
+  var c_avg=calcular(tipo,d_avg);
+
+  var periodoLabel=mesLabel(rels[0].mes)+(n>1?' a '+mesLabel(rels[n-1].mes):'');
+  document.title='Relatório '+p.cliente.nome+' — DK2 Conecta';
+
+  // ── Header
+  var headerHtml=buildHeader(agencia,'Relatório Completo',n+' mês'+(n>1?'es':''),p.cliente.nome,c_total.roas,'📅 '+periodoLabel);
+
+  // ── Tab nav
+  var tabNav='<div class="tabs-nav">'+
+    '<button class="tab-btn active" onclick="switchTab(\'resumo\')">📊 Resumo</button>'+
+    rels.map(function(r){
+      return'<button class="tab-btn" onclick="switchTab(\''+r.mes+'\')">'+mesLabelCurto(r.mes)+'</button>';
+    }).join('')+
+    '</div>';
+
+  // ── Aba Resumo
+  var lbR=labelReceita(tipo);
+
+  // Hero cards
+  var heroCards='<div class="hero-grid">'+
+    '<div class="hero-card" style="background:linear-gradient(135deg,#7c2d12,#9a3412);color:white">'+
+      '<div class="hero-card-lbl">💸 Investimento Total</div>'+
+      '<div class="hero-card-val">'+brl(d_total.investimento)+'</div>'+
+      '<div class="hero-card-sub">'+brl(d_avg.investimento)+'/mês</div>'+
+    '</div>'+
+    '<div class="hero-card" style="background:linear-gradient(135deg,#14532d,#166534);color:white">'+
+      '<div class="hero-card-lbl">💰 '+lbR+'</div>'+
+      '<div class="hero-card-val" style="color:#4ade80">'+brl(recTotal)+'</div>'+
+      '<div class="hero-card-sub">'+brl(recTotal/n)+'/mês</div>'+
+    '</div>'+
+    '<div class="hero-card" style="background:linear-gradient(135deg,#1e1b4b,#312e81);color:white">'+
+      '<div class="hero-card-lbl">📊 ROAS Total</div>'+
+      '<div class="hero-card-val" style="color:#a5b4fc">'+roasF(c_total.roas)+'</div>'+
+      '<div class="hero-card-sub">Média: '+roasF(c_avg.roas)+'</div>'+
+    '</div>'+
+    '<div class="hero-card" style="background:linear-gradient(135deg,#7c1d1d,#991b1b);color:white">'+
+      '<div class="hero-card-lbl">🎯 Leads Totais</div>'+
+      '<div class="hero-card-val">'+num(d_total.leads)+'</div>'+
+      '<div class="hero-card-sub">CPL médio: '+brl(c_avg.cpl)+'</div>'+
+    '</div>'+
+    '</div>';
+
+  // Tabela mês a mês
+  var rows=rels.map(function(r){
+    var d=r.dados,c=calcular(tipo,d),rec=getReceita(tipo,d,c);
+    return'<tr>'+
+      '<td><strong>'+mesLabel(r.mes)+'</strong></td>'+
+      '<td>'+num(d.leads)+'</td>'+
+      '<td>'+brl(d.investimento)+'</td>'+
+      '<td style="color:#16a34a;font-weight:600">'+brl(rec)+'</td>'+
+      '<td style="font-weight:800;color:'+(c.roas>=3?'#16a34a':c.roas>=1.5?'#b45309':'#dc2626')+'">'+roasF(c.roas)+'</td>'+
+      '<td>'+brl(c.cpl)+'</td>'+
+      '</tr>';
+  }).join('');
+  var totRow='<tr style="background:#f8f9fc;font-weight:700">'+
+    '<td><strong>TOTAL</strong></td>'+
+    '<td><strong>'+num(d_total.leads)+'</strong></td>'+
+    '<td><strong>'+brl(d_total.investimento)+'</strong></td>'+
+    '<td style="color:#16a34a"><strong>'+brl(recTotal)+'</strong></td>'+
+    '<td style="font-weight:800;color:'+(c_total.roas>=3?'#16a34a':'#b45309')+'"><strong>'+roasF(c_total.roas)+'</strong></td>'+
+    '<td><strong>'+brl(c_total.cpl)+'</strong></td>'+
+    '</tr>';
+  var avgRow='<tr style="background:#fff7ed">'+
+    '<td><strong>MÉDIA/MÊS</strong></td>'+
+    '<td>'+num(Math.round(d_avg.leads))+'</td>'+
+    '<td>'+brl(d_avg.investimento)+'</td>'+
+    '<td style="color:#16a34a">'+brl(recTotal/n)+'</td>'+
+    '<td style="color:#b45309;font-weight:700">'+roasF(c_avg.roas)+'</td>'+
+    '<td>'+brl(c_avg.cpl)+'</td>'+
+    '</tr>';
+  var mesTable='<div class="card"><div class="card-title">📅 Histórico Mês a Mês</div>'+
+    '<table><thead><tr><th>Mês</th><th>Leads</th><th>Investimento</th><th>'+lbR+'</th><th>ROAS</th><th>CPL</th></tr></thead>'+
+    '<tbody>'+rows+'</tbody>'+
+    '<tfoot>'+totRow+avgRow+'</tfoot></table></div>';
+
+  // Funil acumulado
+  var funnelHtml='<div class="funnel-section"><div class="funnel-title">📉 Funil Acumulado — '+periodoLabel+'</div>'+buildFunnel(tipo,d_total)+'</div>';
+
+  // KPIs totais
+  var kpisHtml='<div class="calc-grid">'+buildKpis(tipo,d_total,c_total)+'</div>';
+
+  var resumoPane='<div id="pane-resumo" class="tab-pane active">'+
+    heroCards+
+    buildChart(rels,tipo)+
+    mesTable+
+    funnelHtml+
+    kpisHtml+
+    '<div class="insights"><div class="insights-header"><span class="insights-badge">✦ Análise</span><span class="insights-title">Insights Gerais</span></div>'+buildInsights(tipo,d_total,c_total)+'</div>'+
+    '</div>';
+
+  // ── Abas individuais por mês
+  var mesPanes=rels.map(function(r){
+    var d=r.dados,c=calcular(tipo,d);
+    var receitaHtml='';
+    if(tipo==='clinica'){
+      receitaHtml='<div class="two-col">'+
+        '<div style="background:linear-gradient(135deg,#16a34a,#15803d);border-radius:12px;padding:20px 24px;color:white"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;opacity:.7">Tratamentos Efetivados</div><div style="font-size:22px;font-weight:800">'+brl(d.receita_efetivada)+'</div></div>'+
+        '<div style="background:linear-gradient(135deg,#dc2626,#b91c1c);border-radius:12px;padding:20px 24px;color:white"><div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;opacity:.7">Tratamentos Não Efetivados</div><div style="font-size:22px;font-weight:800">'+brl(d.receita_nao_efetivada)+'</div></div>'+
+        '</div>';
+    }
+    return'<div id="pane-'+r.mes+'" class="tab-pane">'+
+      '<div class="card" style="margin-bottom:20px;background:linear-gradient(135deg,#1a1a2e,#0f3460);color:white;padding:20px 24px">'+
+        '<div style="font-size:13px;opacity:.6;margin-bottom:4px">'+mesLabel(r.mes)+'</div>'+
+        '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">'+
+          '<div><div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px">Investimento</div><div style="font-size:22px;font-weight:800">'+brl(d.investimento)+'</div></div>'+
+          '<div><div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px">'+lbR+'</div><div style="font-size:22px;font-weight:800;color:#4ade80">'+brl(getReceita(tipo,d,c))+'</div></div>'+
+          '<div><div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px">Leads</div><div style="font-size:22px;font-weight:800;color:#fbbf24">'+num(d.leads)+'</div></div>'+
+          '<div><div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px">ROAS</div><div style="font-size:26px;font-weight:900;color:#4ade80">'+roasF(c.roas)+'</div></div>'+
+        '</div>'+
+      '</div>'+
+      receitaHtml+
+      '<div class="funnel-section"><div class="funnel-title">📉 Funil de Conversão</div>'+buildFunnel(tipo,d)+'</div>'+
+      '<div class="calc-grid">'+buildKpis(tipo,d,c)+'</div>'+
+      '<div class="insights"><div class="insights-header"><span class="insights-badge">✦ Análise</span><span class="insights-title">Insights de '+mesLabel(r.mes)+'</span></div>'+buildInsights(tipo,d,c)+'</div>'+
+      '</div>';
+  }).join('');
+
+  app.innerHTML=headerHtml+tabNav+resumoPane+mesPanes;
+}
+
+// ── Tab switcher ──────────────────────────────────────────────────────────────
+window.switchTab=function(id){
+  document.querySelectorAll('.tab-pane').forEach(function(el){el.classList.remove('active');});
+  document.querySelectorAll('.tab-btn').forEach(function(el){el.classList.remove('active');});
+  var pane=document.getElementById('pane-'+id);
+  if(pane)pane.classList.add('active');
+  var btns=document.querySelectorAll('.tab-btn');
+  btns.forEach(function(btn){
+    if(btn.getAttribute('onclick')==="switchTab('"+id+"')")btn.classList.add('active');
+  });
+};
+
+// ── Render principal ──────────────────────────────────────────────────────────
 function render(){
-  const app=document.getElementById('app');
-  const hash=location.hash.slice(1);
+  var app=document.getElementById('app');
+  var hash=location.hash.slice(1);
   if(!hash){
-    app.innerHTML=`<div class="error-state"><div class="error-icon">🔗</div><div class="error-title">Link inválido</div><p>Este link não contém dados de relatório.</p></div>`;
+    app.innerHTML='<div class="error-state"><div class="error-icon">🔗</div><div class="error-title">Link inválido</div><p>Este link não contém dados de relatório.</p></div>';
     return;
   }
-  let p;
+  var p;
   try{p=JSON.parse(decodeURIComponent(atob(hash)));}
   catch(e){
-    app.innerHTML=`<div class="error-state"><div class="error-icon">⚠️</div><div class="error-title">Erro ao carregar relatório</div><p>O link pode estar corrompido. Solicite um novo link.</p></div>`;
+    app.innerHTML='<div class="error-state"><div class="error-icon">⚠️</div><div class="error-title">Erro ao carregar relatório</div><p>O link pode estar corrompido. Solicite um novo link.</p></div>';
     return;
   }
-
-  const tipo=p.cliente.tipo;
-  const d=p.dados;
-  const c=calcular(tipo,d);
-  const clienteNome=p.cliente.nome;
-  const agencia=p.agencia||'DK2 Conecta';
-  const isPeriodo=p.tipo==='periodo';
-  const periodoLabel=isPeriodo?`${mesLabel(p.inicio)} a ${mesLabel(p.fim)}`:mesLabel(p.mes);
-
-  document.title=`Relatório ${clienteNome} — ${periodoLabel}`;
-
-  // Header
-  const headerHtml=`<div class="header">
-    <div>
-      <div class="logo-row">
-        <div class="logo-box">DK2</div>
-        <div class="agencia-name">${agencia}</div>
-      </div>
-      <div class="report-title">${isPeriodo?'Relatório de Período':'Relatório de Performance'}</div>
-      <div class="report-sub">${isPeriodo?`${p.meses} mês(es) · ${tipo}`:periodoLabel}</div>
-      ${isPeriodo?`<div class="periodo-badge"><span>📅 ${periodoLabel}</span></div>`:''}
-    </div>
-    <div class="header-right">
-      <div class="cliente-lbl">Cliente</div>
-      <div class="cliente-nome">${clienteNome}</div>
-      <div class="roas-lbl">${isPeriodo?'ROAS do Período':'ROAS'}</div>
-      <div class="roas-val">${roasF(c.roas)}</div>
-    </div>
-  </div>`;
-
-  // Hero totais (período)
-  let heroHtml='';
-  if(isPeriodo){
-    const labelR=tipo==='clinica'?'Receita Efetivada':tipo==='corretor'?'Comissão Gerada':tipo==='pousada'?'Receita Total':'Valor Contratado';
-    const recT=tipo==='clinica'?d.receita_efetivada||0:tipo==='corretor'?c.comissao||0:tipo==='pousada'?d.receita||0:d.valor_contratado||0;
-    heroHtml=`<div class="two-col">
-      <div style="background:linear-gradient(135deg,#7c2d12,#9a3412);border-radius:14px;padding:22px 28px">
-        <div style="color:rgba(255,255,255,.6);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">💸 Investimento Total</div>
-        <div style="color:white;font-size:28px;font-weight:900">${brl(d.investimento)}</div>
-      </div>
-      <div style="background:linear-gradient(135deg,#14532d,#166534);border-radius:14px;padding:22px 28px">
-        <div style="color:rgba(255,255,255,.6);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">💰 ${labelR}</div>
-        <div style="color:#4ade80;font-size:28px;font-weight:900">${brl(recT)}</div>
-      </div>
-    </div>`;
-  }
-
-  // Receita boxes (clínica mensal)
-  let receitaHtml='';
-  if(tipo==='clinica'&&!isPeriodo){
-    receitaHtml=`<div class="two-col">
-      <div style="background:linear-gradient(135deg,#16a34a,#15803d);border-radius:12px;padding:20px 24px">
-        <div style="color:rgba(255,255,255,.7);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Tratamentos Efetivados</div>
-        <div style="color:white;font-size:24px;font-weight:800">${brl(d.receita_efetivada)}</div>
-      </div>
-      <div style="background:linear-gradient(135deg,#dc2626,#b91c1c);border-radius:12px;padding:20px 24px">
-        <div style="color:rgba(255,255,255,.7);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Tratamentos Não Efetivados</div>
-        <div style="color:white;font-size:24px;font-weight:800">${brl(d.receita_nao_efetivada)}</div>
-      </div>
-    </div>`;
-  }
-
-  // Tabela mês a mês (período)
-  let mesTableHtml='';
-  if(isPeriodo&&p.mesesData&&p.mesesData.length>1){
-    const labelR=tipo==='clinica'?'Receita':tipo==='corretor'?'Comissão':tipo==='pousada'?'Receita':'Valor Contratado';
-    const rows=p.mesesData.map(r=>{
-      const rd=r.dados;const rc=calcular(tipo,rd);
-      const rec=tipo==='clinica'?rd.receita_efetivada||0:tipo==='corretor'?rc.comissao||0:tipo==='pousada'?rd.receita||0:rd.valor_contratado||0;
-      return`<tr>
-        <td><strong>${mesLabel(r.mes)}</strong></td>
-        <td>${num(rd.leads)}</td>
-        <td>${brl(rd.investimento)}</td>
-        <td style="color:#16a34a;font-weight:600">${brl(rec)}</td>
-        <td style="font-weight:800;color:${(rc.roas||0)>=3?'#16a34a':'#b45309'}">${roasF(rc.roas)}</td>
-      </tr>`;
-    }).join('');
-    mesTableHtml=`<div class="card">
-      <div class="card-title">📅 Detalhamento Mês a Mês</div>
-      <table>
-        <thead><tr><th>Mês</th><th>Leads</th><th>Investimento</th><th>${labelR}</th><th>ROAS</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`;
-  }
-
-  app.innerHTML=`
-    ${headerHtml}
-    ${heroHtml}
-    ${receitaHtml}
-    <div class="funnel-section">
-      <div class="funnel-title">📉 Funil de Conversão${isPeriodo?' — Acumulado':''}</div>
-      ${buildFunnel(tipo,d)}
-    </div>
-    <div class="calc-grid">${buildKpis(tipo,d,c)}</div>
-    ${mesTableHtml}
-    <div class="insights">
-      <div class="insights-header">
-        <span class="insights-badge">✦ Análise</span>
-        <span class="insights-title">Insights do Período</span>
-      </div>
-      ${buildInsights(tipo,d,c)}
-    </div>
-  `;
+  if(p.tipo==='cliente')renderCliente(p);
+  else renderSingle(p);
 }
 
 render();
